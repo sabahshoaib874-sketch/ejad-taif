@@ -33,27 +33,27 @@
 </div>
 
 <!-- القائمة الجانبية الزجاجية -->
-<div id="sidebar-overlay" class="sidebar-overlay" onclick="toggleMenu()"></div>
+<div id="sidebar-overlay" class="sidebar-overlay" onclick="window.toggleMenu()"></div>
 <aside id="side-menu" class="side-menu">
   <div class="side-header">
     <h3>القائمة</h3>
-    <button type="button" class="close-menu" onclick="toggleMenu()">×</button>
+    <button type="button" class="close-menu" onclick="window.toggleMenu()">×</button>
   </div>
   <ul class="side-links">
-    <li onclick="navigateMenu('home')">الصفحة الرئيسية</li>
-    <li onclick="navigateForm('معثور عليه')">تسجيل غرض جديد</li>
-    <li onclick="navigateForm('مفقود')">الإبلاغ عن غرض</li>
-    <li onclick="navigateMenu('qr')">إنشاء QR</li>
-    <li onclick="navigateMenu('list')">قائمة المفقودات</li>
-    <li onclick="navigateMenu('support')">الدعم الفني</li>
-    <li onclick="navigateMenu('help')">المساعدة</li>
-    <li onclick="navigateMenu('info')">معلومات</li>
+    <li onclick="window.navigateMenu('home')">الصفحة الرئيسية</li>
+    <li onclick="window.navigateForm('معثور عليه')">تسجيل غرض جديد</li>
+    <li onclick="window.navigateForm('مفقود')">الإبلاغ عن غرض</li>
+    <li onclick="window.navigateMenu('qr')">إنشاء QR</li>
+    <li onclick="window.navigateMenu('list')">قائمة المفقودات</li>
+    <li onclick="window.navigateMenu('support')">الدعم الفني</li>
+    <li onclick="window.navigateMenu('help')">المساعدة</li>
+    <li onclick="window.navigateMenu('info')">معلومات</li>
   </ul>
 </aside>
 
 <!-- الشريط العلوي بشعار المؤسسة الحقيقي -->
 <nav class="nav-glass">
-  <div class="logo-box" onclick="showView('home')">
+  <div class="logo-box" onclick="window.showView('home')">
     <svg class="tvtc-star" viewBox="0 0 54 54" xmlns="http://w3.org">
       <g transform="translate(27, 27)">
         <polygon points="0,-24 5,-8 0,-4 -5,-8" fill="#008755"/>
@@ -74,13 +74,13 @@
   </div>
   <div class="nav-search-bar">
     <svg class="icon" viewBox="0 0 24 24"><circle cx="11" cy="11" r="7" fill="none" stroke="currentColor" stroke-width="2"/><line x1="16.5" y1="16.5" x2="22" y2="22" stroke="currentColor" stroke-width="2"/></svg>
-    <input type="text" id="search-input" placeholder="ابحث هنا..." oninput="searchItems()">
+    <input type="text" id="search-input" placeholder="ابحث هنا..." oninput="if(window.searchItems) window.searchItems()">
   </div>
   <div class="nav-icons">
-    <button type="button" class="nav-btn" title="معلومات" onclick="showView('info')"><svg class="icon" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10" fill="none" stroke="currentColor" stroke-width="2"/><line x1="12" y1="10" x2="12" y2="16" stroke="currentColor" stroke-width="2"/><circle cx="12" cy="7" r="1.5" fill="currentColor"/></svg></button>
-    <button type="button" class="nav-btn" title="المساعدة" onclick="showView('help')"><svg class="icon" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10" fill="none" stroke="currentColor" stroke-width="2"/><path d="M9.5 9a2.5 2.5 0 1 1 4 2c-.8.6-1.5 1.2-1.5 2" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="12" cy="17" r="1" fill="currentColor"/></svg></button>
+    <button type="button" class="nav-btn" title="معلومات" onclick="window.showView('info')"><svg class="icon" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10" fill="none" stroke="currentColor" stroke-width="2"/><line x1="12" y1="10" x2="12" y2="16" stroke="currentColor" stroke-width="2"/><circle cx="12" cy="7" r="1.5" fill="currentColor"/></svg></button>
+    <button type="button" class="nav-btn" title="المساعدة" onclick="window.showView('help')"><svg class="icon" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10" fill="none" stroke="currentColor" stroke-width="2"/><path d="M9.5 9a2.5 2.5 0 1 1 4 2c-.8.6-1.5 1.2-1.5 2" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="12" cy="17" r="1" fill="currentColor"/></svg></button>
     <button type="button" class="nav-btn" title="التنبيهات" onclick="alert('لا توجد تنبيهات جديدة')"><svg class="icon" viewBox="0 0 24 24"><path d="M18 16H6l1-1v-4a5 5 0 0 1 10 0v4z" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="12" cy="19" r="1.5" fill="currentColor"/></svg></button>
-    <button type="button" class="nav-btn" title="القائمة" onclick="toggleMenu()"><svg class="icon" viewBox="0 0 24 24"><line x1="4" y1="6" x2="20" y2="6" stroke="currentColor" stroke-width="2"/><line x1="4" y1="12" x2="20" y2="12" stroke="currentColor" stroke-width="2"/><line x1="4" y1="18" x2="20" y2="18" stroke="currentColor" stroke-width="2"/></svg></button>
+    <button type="button" class="nav-btn" title="القائمة" onclick="window.toggleMenu()"><svg class="icon" viewBox="0 0 24 24"><line x1="4" y1="6" x2="20" y2="6" stroke="currentColor" stroke-width="2"/><line x1="4" y1="12" x2="20" y2="12" stroke="currentColor" stroke-width="2"/><line x1="4" y1="18" x2="20" y2="18" stroke="currentColor" stroke-width="2"/></svg></button>
   </div>
 </nav>
 
@@ -93,23 +93,23 @@
 
 <!-- بطاقات الصفحة الرئيسية -->
 <section id="view-home" class="services-list">
-  <div class="service-card" onclick="openForm('معثور عليه')">
+  <div class="service-card" onclick="window.openForm('معثور عليه')">
     <div class="icon-circle"><svg viewBox="0 0 24 24"><line x1="12" y1="5" x2="12" y2="19" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/><line x1="5" y1="12" x2="19" y2="12" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/></svg></div>
     <div class="service-text"><h3>تسجيل غرض جديد</h3><p>استخدم هذه الخدمة لتسجيل غرض جديد مفقود أو معثور عليه في النظام.</p></div>
   </div>
-  <div class="service-card" onclick="showView('qr')">
+  <div class="service-card" onclick="window.showView('qr')">
     <div class="icon-circle"><svg viewBox="0 0 24 24"><rect x="3" y="3" width="7" height="7" fill="none" stroke="currentColor" stroke-width="2"/><rect x="14" y="3" width="7" height="7" fill="none" stroke="currentColor" stroke-width="2"/><rect x="3" y="14" width="7" height="7" fill="none" stroke="currentColor" stroke-width="2"/><rect x="14" y="14" width="4" height="4" fill="currentColor"/></svg></div>
     <div class="service-text"><h3>إنشاء QR</h3><p>إنشاء رمز QR مخصص ليسهل الوصول إلى بيانات الغرض بسرعة.</p></div>
   </div>
-  <div class="service-card" onclick="openForm('مفقود')">
+  <div class="service-card" onclick="window.openForm('مفقود')">
     <div class="icon-circle"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7" fill="none" stroke="currentColor" stroke-width="2"/><line x1="16.5" y1="16.5" x2="22" y2="22" stroke="currentColor" stroke-width="2"/></svg></div>
     <div class="service-text"><h3>الإبلاغ عن غرض مفقود</h3><p>إرسال بلاغ عن غرض مفقود مع تفاصيل تساعد في العثور عليه.</p></div>
   </div>
-  <div class="service-card" onclick="showView('list')">
+  <div class="service-card" onclick="window.showView('list')">
     <div class="icon-circle"><svg viewBox="0 0 24 24"><line x1="6" y1="7" x2="20" y2="7" stroke="currentColor" stroke-width="2"/><line x1="6" y1="12" x2="20" y2="12" stroke="currentColor" stroke-width="2"/><line x1="6" y1="17" x2="20" y2="17" stroke="currentColor" stroke-width="2"/><circle cx="4" cy="7" r="1.2" fill="currentColor"/><circle cx="4" cy="12" r="1.2" fill="currentColor"/><circle cx="4" cy="17" r="1.2" fill="currentColor"/></svg></div>
     <div class="service-text"><h3>قائمة المفقودات</h3><p>عرض جميع الأغراض والبلاغات في النظام.</p></div>
   </div>
-  <div class="service-card" onclick="showView('support')">
+  <div class="service-card" onclick="window.showView('support')">
     <div class="icon-circle"><svg viewBox="0 0 24 24"><path d="M4 12a8 8 0 0 1 16 0" fill="none" stroke="currentColor" stroke-width="2"/><rect x="3" y="12" width="4" height="6" rx="2" fill="currentColor"/><rect x="17" y="12" width="4" height="6" rx="2" fill="currentColor"/></svg></div>
     <div class="service-text"><h3>الدعم الفني</h3><p>تواصل مباشر مع فريق الدعم لحل أي مشكلة تواجهك.</p></div>
   </div>
@@ -118,15 +118,15 @@
 <!-- نموذج التسجيل والإبلاغ مع التصوير -->
 <section id="view-form" class="view-container">
   <div class="card-panel">
-    <div class="panel-header"><h2 id="form-title">تسجيل غرض</h2><button type="button" class="btn-back" onclick="showView('home')">رجوع</button></div>
-    <form onsubmit="addItem(event)">
+    <div class="panel-header"><h2 id="form-title">تسجيل غرض</h2><button type="button" class="btn-back" onclick="window.showView('home')">رجوع</button></div>
+    <form onsubmit="if(window.addItem) window.addItem(event)">
       <input type="hidden" id="item-status">
       <div class="form-group"><label>اسم الغرض</label><input type="text" id="item-name" required placeholder="مثال: بطاقة متدرب، مفتاح..."></div>
       <div class="form-group"><label>المكان / المبنى</label><input type="text" id="item-loc" required placeholder="مثال: مبنى الحاسب"></div>
       <div class="form-group"><label>رقم التواصل</label><input type="text" id="item-phone" required placeholder="05xxxxxxxx"></div>
       <div class="form-group">
         <label>توثيق الغرض بصورة (كاميرا أو استوديو)</label>
-        <input type="file" id="item-image" accept="image/*" capture="environment" onchange="previewPhoto(event)">
+        <input type="file" id="item-image" accept="image/*" capture="environment" onchange="if(window.previewPhoto) window.previewPhoto(event)">
         <div id="photo-preview-box" style="display:none; margin-top:10px; text-align:center;">
           <img id="photo-preview" src="" alt="معاينة" style="max-width:140px; border-radius:10px; border:1px solid #cbd5e1;">
         </div>
@@ -139,12 +139,9 @@
 <!-- قائمة المفقودات -->
 <section id="view-list" class="view-container">
   <div class="card-panel">
-    <div class="panel-header"><h2>قائمة المفقودات</h2><button type="button" class="btn-back" onclick="showView('home')">رجوع</button></div>
+    <div class="panel-header"><h2>قائمة المفقودات</h2><button type="button" class="btn-back" onclick="window.showView('home')">رجوع</button></div>
     <div id="items-list"></div>
   </div>
 </section>
 
 <!-- إنشاء QR -->
-<section id="view-qr" class="view-container">
-  <div class="card-panel">
-    <div class="panel-header"><h2>إنشاء رمز QR</h2><button type="button" class="btn-back" onclick="showView('home')">رجوع</button></div>
