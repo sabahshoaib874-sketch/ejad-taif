@@ -28,7 +28,7 @@
     </div>
     <h2>مرحباً بك في منصة إيجاد الرقمية</h2>
     <p>منصتك الذكية بالكلية التقنية بالطائف للإبلاغ عن المفقودات، تسجيل المعثورات، واستعادتها بكل سهولة وأمان.</p>
-    <button onclick="closeWelcome()" class="btn-submit">ابدأ الاستخدام الآن</button>
+    <button type="button" onclick="document.getElementById('welcome-modal').style.display='none'" class="btn-submit" style="position:relative; z-index:10000; cursor:pointer;">ابدأ الاستخدام الآن</button>
   </div>
 </div>
 
@@ -37,7 +37,7 @@
 <aside id="side-menu" class="side-menu">
   <div class="side-header">
     <h3>القائمة</h3>
-    <button class="close-menu" onclick="toggleMenu()">×</button>
+    <button type="button" class="close-menu" onclick="toggleMenu()">×</button>
   </div>
   <ul class="side-links">
     <li onclick="navigateMenu('home')">الصفحة الرئيسية</li>
@@ -77,10 +77,10 @@
     <input type="text" id="search-input" placeholder="ابحث هنا..." oninput="searchItems()">
   </div>
   <div class="nav-icons">
-    <button class="nav-btn" title="معلومات" onclick="showView('info')"><svg class="icon" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10" fill="none" stroke="currentColor" stroke-width="2"/><line x1="12" y1="10" x2="12" y2="16" stroke="currentColor" stroke-width="2"/><circle cx="12" cy="7" r="1.5" fill="currentColor"/></svg></button>
-    <button class="nav-btn" title="المساعدة" onclick="showView('help')"><svg class="icon" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10" fill="none" stroke="currentColor" stroke-width="2"/><path d="M9.5 9a2.5 2.5 0 1 1 4 2c-.8.6-1.5 1.2-1.5 2" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="12" cy="17" r="1" fill="currentColor"/></svg></button>
-    <button class="nav-btn" title="التنبيهات" onclick="alert('لا توجد تنبيهات جديدة')"><svg class="icon" viewBox="0 0 24 24"><path d="M18 16H6l1-1v-4a5 5 0 0 1 10 0v4z" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="12" cy="19" r="1.5" fill="currentColor"/></svg></button>
-    <button class="nav-btn" title="القائمة" onclick="toggleMenu()"><svg class="icon" viewBox="0 0 24 24"><line x1="4" y1="6" x2="20" y2="6" stroke="currentColor" stroke-width="2"/><line x1="4" y1="12" x2="20" y2="12" stroke="currentColor" stroke-width="2"/><line x1="4" y1="18" x2="20" y2="18" stroke="currentColor" stroke-width="2"/></svg></button>
+    <button type="button" class="nav-btn" title="معلومات" onclick="showView('info')"><svg class="icon" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10" fill="none" stroke="currentColor" stroke-width="2"/><line x1="12" y1="10" x2="12" y2="16" stroke="currentColor" stroke-width="2"/><circle cx="12" cy="7" r="1.5" fill="currentColor"/></svg></button>
+    <button type="button" class="nav-btn" title="المساعدة" onclick="showView('help')"><svg class="icon" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10" fill="none" stroke="currentColor" stroke-width="2"/><path d="M9.5 9a2.5 2.5 0 1 1 4 2c-.8.6-1.5 1.2-1.5 2" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="12" cy="17" r="1" fill="currentColor"/></svg></button>
+    <button type="button" class="nav-btn" title="التنبيهات" onclick="alert('لا توجد تنبيهات جديدة')"><svg class="icon" viewBox="0 0 24 24"><path d="M18 16H6l1-1v-4a5 5 0 0 1 10 0v4z" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="12" cy="19" r="1.5" fill="currentColor"/></svg></button>
+    <button type="button" class="nav-btn" title="القائمة" onclick="toggleMenu()"><svg class="icon" viewBox="0 0 24 24"><line x1="4" y1="6" x2="20" y2="6" stroke="currentColor" stroke-width="2"/><line x1="4" y1="12" x2="20" y2="12" stroke="currentColor" stroke-width="2"/><line x1="4" y1="18" x2="20" y2="18" stroke="currentColor" stroke-width="2"/></svg></button>
   </div>
 </nav>
 
@@ -118,7 +118,7 @@
 <!-- نموذج التسجيل والإبلاغ مع التصوير -->
 <section id="view-form" class="view-container">
   <div class="card-panel">
-    <div class="panel-header"><h2 id="form-title">تسجيل غرض</h2><button class="btn-back" onclick="showView('home')">رجوع</button></div>
+    <div class="panel-header"><h2 id="form-title">تسجيل غرض</h2><button type="button" class="btn-back" onclick="showView('home')">رجوع</button></div>
     <form onsubmit="addItem(event)">
       <input type="hidden" id="item-status">
       <div class="form-group"><label>اسم الغرض</label><input type="text" id="item-name" required placeholder="مثال: بطاقة متدرب، مفتاح..."></div>
@@ -139,7 +139,7 @@
 <!-- قائمة المفقودات -->
 <section id="view-list" class="view-container">
   <div class="card-panel">
-    <div class="panel-header"><h2>قائمة المفقودات</h2><button class="btn-back" onclick="showView('home')">رجوع</button></div>
+    <div class="panel-header"><h2>قائمة المفقودات</h2><button type="button" class="btn-back" onclick="showView('home')">رجوع</button></div>
     <div id="items-list"></div>
   </div>
 </section>
@@ -147,6 +147,4 @@
 <!-- إنشاء QR -->
 <section id="view-qr" class="view-container">
   <div class="card-panel">
-    <div class="panel-header"><h2>إنشاء رمز QR</h2><button class="btn-back" onclick="showView('home')">رجوع</button></div>
-    <div class="form-group"><label>بيانات الغرض أو رقم الجوال</label><input type="text" id="qr-data" placeholder="اكتب البيانات هنا..."></div>
-    <button class="btn-submit" onclick="makeQR()">توليد الرمز</button>
+    <div class="panel-header"><h2>إنشاء رمز QR</h2><button type="button" class="btn-back" onclick="showView('home')">رجوع</button></div>
