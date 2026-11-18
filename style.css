@@ -276,7 +276,7 @@ body.sub-view-active {
   position: relative;
   height: 270px;
   background: linear-gradient(rgba(58, 72, 86, 0.62), rgba(45, 58, 72, 0.72)),
-              url('building .JPG') center/cover no-repeat,
+              url('building.JPG') center/cover no-repeat,
               linear-gradient(135deg, #4b5d6e, #334155);
   color: #fff;
   display: flex;
